@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+
+<div class="input-group">
+<span class="input-group-addon" id="basic-addon1">@</span>
+<input type="text" 
+class="form-control" 
+placeholder="Add a string" 
+aria-describedby="basic-addon1" 
+[(ngModel)]="alertMessage"
+(keyup)="reverseString($event)"
+>
+
+
+</div>
