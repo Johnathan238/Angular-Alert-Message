@@ -7,4 +7,12 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+
+  firstName = ''
+  lastName = ''
+  string1 = ''
+  alertMessage(){
+    alert(`Hello ${this.firstName}, ${this.lastName} `)
+    console.log(this.firstName)
+  }
 }

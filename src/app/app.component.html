@@ -1,14 +1,31 @@
 <hello name="{{ name }}"></hello>
 
 <div class="input-group">
-<span class="input-group-addon" id="basic-addon1">@</span>
+<!-- <span class="input-group-addon" id="basic-addon1">@</span>
 <input type="text" 
 class="form-control" 
 placeholder="Add a string" 
 aria-describedby="basic-addon1" 
-[(ngModel)]="alertMessage"
+[(ngModel)]="string1"
 (keyup)="reverseString($event)"
->
+> -->
 
+<form #f="ngForm">
+  <label for="fname">First name:</label><br>
+  <input 
+  type="text" 
+  id="fname" 
+  placeholder="First Name" 
+  [(ngModel)]="firstName"
+  [ngModelOptions]="{standalone: true}"><br><br>
+  <label for="lname">Last name:</label><br>
+  <input 
+  type="text" 
+  id="lname" 
+  placeholder="Last Name" 
+  [(ngModel)]="lastName"
+  [ngModelOptions]="{standalone: true}"><br><br>
+  <button type="submit" value="Submit" (click)="alertMessage()">Submit</button>
+</form>
 
 </div>
